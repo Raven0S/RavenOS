@@ -1,0 +1,3 @@
+term.clear()
+print("Setting up aliases...")
+shell.run("boot/bootscreen")
