@@ -1,5 +1,12 @@
+fs.makeDir("os")
+fs.makeDir("boot")
+fs.makeDir("cmds")
+fs.makeDir("user")
+
 function install(addr, filename)
   shell.run("wget "..addr.." "..filename)
+  term.clear()
+  print("Installing... "...filename)
 end
 
 term.clear()
