@@ -1,0 +1,6 @@
+function install(addr, filename)
+  shell.run("wget "..addr.." "..filename)
+end
+
+term.clear()
+term.setCursorPos(1,1)
