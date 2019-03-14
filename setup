@@ -4,6 +4,7 @@ fs.makeDir("cmds")
 fs.makeDir("user")
 
 function install(addr, filename)
+  term.clear()
   shell.run("wget "..addr.." "..filename)
   term.clear()
   term.setCursorPos(1,1)
