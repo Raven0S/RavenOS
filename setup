@@ -16,5 +16,6 @@ install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/startup", "sta
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/config", "boot/config")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/bootscreen", "boot/bootscreen")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/console", "os/console")
+install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/cmd/uninstall", "cmds/uninstall")
 
 os.reboot()
