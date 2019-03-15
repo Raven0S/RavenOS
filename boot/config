@@ -1,3 +1,4 @@
 term.clear()
-print("Setting up aliases...")
+print("Setting up APIs...")
+os.loadAPI("apis/config")
 shell.run("boot/bootscreen")
