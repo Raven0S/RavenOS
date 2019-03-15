@@ -1,5 +1,5 @@
 function uninstall()
-  shell.run("delete *")
+  shell.run("delete /*")
 end
 
 term.clear()
