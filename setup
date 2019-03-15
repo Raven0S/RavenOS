@@ -22,5 +22,6 @@ install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/cmd/uninstall"
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/config", "apis/config")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/desktop", "pics/desktop.nfp")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/startmenu", "pics/startmenu.nfp")
+install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/desktop", "os/desktop")
 
 os.reboot()
