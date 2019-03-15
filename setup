@@ -3,6 +3,7 @@ fs.makeDir("boot")
 fs.makeDir("cmds")
 fs.makeDir("user")
 fs.makeDir("apis")
+fs.makeDir("pics")
 
 function install(addr, filename)
   shell.run("wget "..addr.." "..filename)
