@@ -1,2 +1,10 @@
+bg = paintutils.loadImage("pics/desktop")
+sm = paintutils.loadImage("pics/startmenu")
+
 term.clear()
 term.setCursorPos(1,1)
+
+paintutils.drawImage(bg, 0, 0)
+wait(0.1)
+
+event, button, x, y = os.pullEvent("mouse_click")
