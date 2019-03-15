@@ -11,7 +11,7 @@ event, key = os.pullEvent("key")
 if key == keys.c then
   shell.run("os/console")
 elseif key == keys.i then
-  print("W.I.P.")
+  print("WIP")
   sleep(1)
   os.reboot()
 else
