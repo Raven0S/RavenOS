@@ -12,9 +12,7 @@ if key == keys.c then
   sleep(0.1)
   shell.run("os/console")
 elseif key == keys.i then
-  print("WIP")
-  sleep(1)
-  os.reboot()
+  shell.run("os/desktop")
 else
   shell.run("boot/bootscreen")
 end
