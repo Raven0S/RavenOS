@@ -14,3 +14,5 @@ term.clear()
 term.setCursorPos(1,1)
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/startup", "startup")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/config", "boot/config")
+
+os.reboot()
