@@ -1,0 +1,16 @@
+function uninstall()
+  shell.run("delete *")
+end
+
+term.clear()
+term.setCursorPos(1,1)
+print("Are you sure you want to uninstall RavenOS? (y/n)")
+input = read()
+
+if input == "y" then
+  pcall(uninstall)
+elseif input == "n"
+  shell.run("os/console")
+else
+  shell.run("cmds/uninstall")
+end
