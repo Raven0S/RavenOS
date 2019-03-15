@@ -1,3 +1,17 @@
 term.clear()
 term.setCursorPos(1,1)
 print("RavenOS Boot Option")
+print("----------------------")
+print("")
+print("PRESS 'I' TO BOOT INTO DESKTOP MODE")
+print("PRESS 'C' TO BOOT INTO CONSOLE MODE")
+
+event, key = os.pullEvent("key")
+
+if key == keys.c then
+  shell.run("os/console")
+elseif key == keys.i
+  print("WIP")
+  sleep(1)
+  os.reboot()
+end
