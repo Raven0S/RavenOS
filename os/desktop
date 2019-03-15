@@ -4,7 +4,7 @@ sm = paintutils.loadImage("pics/startmenu.nfp")
 term.clear()
 term.setCursorPos(1,1)
 
-paintutils.drawImage(bg, 0, 0)
+paintutils.drawImage(bg, 1, 1)
 sleep(0.1)
 
 event, button, x, y = os.pullEvent("mouse_click")
