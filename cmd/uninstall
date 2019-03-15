@@ -9,7 +9,7 @@ input = read()
 
 if input == "y" then
   pcall(uninstall)
-elseif input == "n"
+elseif input == "n" then
   shell.run("os/console")
 else
   shell.run("cmds/uninstall")
