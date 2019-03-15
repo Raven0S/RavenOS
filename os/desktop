@@ -1,5 +1,5 @@
-bg = paintutils.loadImage("pics/desktop")
-sm = paintutils.loadImage("pics/startmenu")
+bg = paintutils.loadImage("pics/desktop.nfp")
+sm = paintutils.loadImage("pics/startmenu.nfp")
 
 term.clear()
 term.setCursorPos(1,1)
