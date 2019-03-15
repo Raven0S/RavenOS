@@ -20,5 +20,7 @@ install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/bootscree
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/console", "os/console")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/cmd/uninstall", "cmds/uninstall")
 install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/config", "apis/config")
+install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/desktop", "pics/desktop")
+install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/startmenu", "pics/startmenu")
 
 os.reboot()
