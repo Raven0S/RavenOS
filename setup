@@ -21,7 +21,6 @@ print("Are you sure you want to install RavenOS (This process will require a com
 input = read()
 
 if input == "yes" then
-  pcall(format)
   term.clear()
   term.setCursorPos(1,1)
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/startup", "startup")
