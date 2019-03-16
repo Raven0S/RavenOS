@@ -16,7 +16,7 @@ function format()
   fs.delete("*")
 end
 
-print("Are you sure you want to install RavenOS (This process will require a complete system format)")
+print("Are you sure you want to install RavenOS?")
 
 input = read()
 
