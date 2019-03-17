@@ -49,9 +49,8 @@ print("X")
 term.setCursorPos(w / 2 - 7, h / 2)
 print("Install")
 
-event, button, x, y = os.pullEvent("mouse_click")
-
 while true do
+  event, button, x, y = os.pullEvent("mouse_click")
   if button == 1 and x >= 18 and x <= 24 and y == 9 then
     installAll()
   elseif button == 1 and x == 51 and y == 1 then
