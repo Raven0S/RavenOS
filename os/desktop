@@ -14,8 +14,10 @@ if button == 1 and x == 1 and y == 19 then
   paintutils.drawImage(sm, 1, 1)
   term.setCursorPos(1,18)
   write("Console")
-   term.setCursorPos(1,17)
+  term.setCursorPos(1,17)
   write("Lua")
+  term.setCursorPos(1,16)
+  write("Downloader")
   
   event, button, x, y = os.pullEvent("mouse_click")
   
@@ -25,6 +27,8 @@ if button == 1 and x == 1 and y == 19 then
     luaID = multishell.launch({}, "rom/programs/lua.lua")
     multishell.setTitle(luaID, "Lua")
     shell.run("os/desktop")
+  elseif button == 1 and x <= 11 and y == 16
+    shell.run("apps/downloader")
   else
     shell.run("os/desktop")
   end
