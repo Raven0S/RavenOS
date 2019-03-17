@@ -1,7 +1,7 @@
 function drawSetting(string, x, y)
   term.setCursorPos(x,y)
   print(string)
-  paintutils.drawPixel(x + string.len(string) + 1, y)
+  paintutils.drawPixel(x + string.len(string) + 1, y, 1)
 end
 
 term.setTextColor(colors.white)
