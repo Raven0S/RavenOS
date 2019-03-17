@@ -5,6 +5,7 @@ function installAll()
   fs.makeDir("user")
   fs.makeDir("apis")
   fs.makeDir("pics")
+  fs.makeDir("os/backup")
 
   function install(addr, filename)
     shell.run("wget "..addr.." "..filename)
