@@ -21,7 +21,7 @@ if button == 1 and x == 1 and y == 19 then
   
   if button == 1 and x <= 7 and y == 18 then
     shell.run("os/console")
-  if button == 1 and x <= 7 and y == 17 then
+  elseif button == 1 and x <= 7 and y == 17 then
     luaID = multishell.launch({}, "rom/programs/lua.lua")
     multishell.setTitle(luaID, "Lua")
   else
