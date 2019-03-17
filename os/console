@@ -4,3 +4,10 @@ term.clear()
 term.setCursorPos(1,1)
 print("RavenOS Console "..config.version)
 print("Type 'dsktp' to go to desktop mode")
+print("")
+
+while true do
+  write(">> ")
+  cmd = read()
+  shell.run(cmd)
+end
