@@ -4,9 +4,14 @@ print("BOOTING")
 if fs.exists("boot/config") then
   shell.run("boot/config")
 else
-  term.clear()
-  term.setCursorPos(1,1)
-  print("Error: File 'boot/config' is missing")
-  sleep(3)
-  os.reboot()
+  if fs.exists("os/backup/config") then
+    fs.copy("os/backup/config", "boot/config")
+    shell.run("boot/config")
+  else
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Error: File 'boot/config' is missing")
+    sleep(3)
+    os.reboot()
+  end
 end
