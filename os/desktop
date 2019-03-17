@@ -1,6 +1,7 @@
 bg = paintutils.loadImage("pics/desktop.nfp")
 sm = paintutils.loadImage("pics/startmenu.nfp")
 
+term.setTextColor(colors.black)
 term.clear()
 term.setCursorPos(1,1)
 
@@ -11,7 +12,14 @@ event, button, x, y = os.pullEvent("mouse_click")
 
 if button == 1 and x == 1 and y == 19 then
   paintutils.drawImage(sm, 1, 1)
-  sleep(1)
+  write("Console")
+  event, button, x, y = os.pullEvent("mouse_click")
+  
+  if button == 1 and x <= 7 and y == 18 then
+    shell.run("os/console")
+  else
+    shell.run("os/desktop")
+  end
 else
   shell.run("os/desktop")
 end
