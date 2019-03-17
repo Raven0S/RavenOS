@@ -7,7 +7,7 @@ shell.setAlias("dsktp", "os/desktop")
 if fs.exists("boot/bootscreen") then
   shell.run("boot/bootscreen")
 else
-  if fs.exists("os/backup/bootscreen")
+  if fs.exists("os/backup/bootscreen") then
     fs.copy("os/backup/bootscreen", "boot/bootscreen")
     shell.run("boot/bootscreen")
   else
