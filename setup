@@ -1,40 +1,63 @@
-fs.makeDir("os")
-fs.makeDir("boot")
-fs.makeDir("cmds")
-fs.makeDir("user")
-fs.makeDir("apis")
-fs.makeDir("pics")
+w, h = term.getSize()
 
-function install(addr, filename)
-  shell.run("wget "..addr.." "..filename)
-  term.clear()
-  term.setCursorPos(1,1)
-  print("Installing... "..filename)
-end
+term.setBackgroundColor(colors.cyan)
+term.clear()
+term.setCursorPos(1,1)
+term.setBackgroundColor(colors.white)
+term.setTextColor(colors.black)
+term.setCursorPos(w / 2 - 7, h / 2)
+print("Install")
 
-function format()
-  fs.delete("*")
-end
+event, button, x, y = os.pullEvent("mouse_click")
 
-print("Are you sure you want to install RavenOS?")
-
-input = read()
-
-if input == "yes" then
-  term.clear()
-  term.setCursorPos(1,1)
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/startup", "startup")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/config", "boot/config")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/bootscreen", "boot/bootscreen")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/console", "os/console")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/cmd/uninstall", "cmds/uninstall")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/config", "apis/config")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/desktop", "pics/desktop.nfp")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/startmenu", "pics/startmenu.nfp")
-  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/desktop", "os/desktop")
-
-  os.reboot()
+if button == 1 and x == w / 2 - 7 and y == h / 2 then
+  installAll()
 else
+  term.setTextColor(colors.white)
+  term.setBackgroundColor(colors.black)
+  term.clear()
+  term.setCursorPos(1,1)
+end
 
+function installAll()
+  fs.makeDir("os")
+  fs.makeDir("boot")
+  fs.makeDir("cmds")
+  fs.makeDir("user")
+  fs.makeDir("apis")
+  fs.makeDir("pics")
+
+  function install(addr, filename)
+    shell.run("wget "..addr.." "..filename)
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Installing... "..filename)
+  end
+
+  function format()
+    fs.delete("*")
+  end
+
+  print("Are you sure you want to install RavenOS?")
+
+  input = read()
+
+  if input == "yes" then
+    term.clear()
+    term.setCursorPos(1,1)
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/startup", "startup")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/config", "boot/config")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/bootscreen", "boot/bootscreen")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/console", "os/console")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/cmd/uninstall", "cmds/uninstall")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/config", "apis/config")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/desktop", "pics/desktop.nfp")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/startmenu", "pics/startmenu.nfp")
+    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/desktop", "os/desktop")
+
+    os.reboot()
+  else
+
+  end
 end
 
