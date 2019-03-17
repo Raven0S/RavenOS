@@ -32,6 +32,8 @@ function installAll()
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/startmenu", "pics/startmenu.nfp")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/desktop", "os/desktop")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/check", "apis/check")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/backup/bootscreen", "os/backup/bootscreen")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/backup/config", "os/backup/config")
 
   os.reboot()
 end
