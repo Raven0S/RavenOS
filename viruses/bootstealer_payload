@@ -1,0 +1,16 @@
+--Does everything else
+
+os.pullEvent = os.pullEventRaw
+
+w, h = term.getSize()
+
+shell.run("set shell.allow_disk_startup false")
+
+term.setBackgroundColor(colors.red)
+term.clear()
+term.setCursorPos(w / 2 - 7, h / 2)
+print("Wrecked")
+
+while true do 
+  sleep(10)
+end
