@@ -1,6 +1,6 @@
-function center(string)
+function center(string, distance)
   w, h = term.getSize()
   
-  term.setCursorPos(w / 2 - string.len(string), h)
+  term.setCursorPos(w / 2 - string.len(string), h + distance)
   print(string)
 end
