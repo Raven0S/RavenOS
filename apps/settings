@@ -1,6 +1,10 @@
+function drawSetting(string, x, y)
+  term.setCursorPos(x,y)
+  print(string)
+  paintutils.drawPixel(x + string.len(string) + 1, y)
+end
+
 term.setTextColor(colors.white)
 term.setBackgroundColor(colors.cyan)
 print("Settings")
-term.setCursorPos(1,3)
-print("Use Rednet")
-paintutils.drawBox(12, 3, 1, 1, 1)
+drawSetting("Use Rednet", 1, 3)
