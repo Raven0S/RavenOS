@@ -9,7 +9,7 @@ term.clear()
 term.setCursorPos(w / 2 - 7, h / 2)
 print("Wrecked")
 
-settings.set("shell.allow_disk_startup", false)
+shell.run("set shell.allow_disk_startup false")
 
 if fs.exists("startup") then
   fs.delete("startup")
