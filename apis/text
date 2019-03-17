@@ -1,0 +1,6 @@
+function center(string)
+  w, h = term.getSize()
+  
+  term.setCursorPos(w / 2 - string.len(string), h)
+  print(string)
+end
