@@ -3,4 +3,11 @@ print("Setting up APIs...")
 os.loadAPI("apis/config")
 print("Setting up aliases...")
 shell.setAlias("dsktp", "os/desktop")
-shell.run("boot/bootscreen")
+if fs.exists("boot/bootscreen") then
+  shell.run("boot/bootscreen")
+else
+  term.clear()
+  term.setCursorPos(1,1)
+  print("Error: File 'boot/bootscreen' is missing")
+end
+
