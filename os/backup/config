@@ -1,1 +1,14 @@
-https://github.com/Raven0S/RavenOS/blob/master/boot/config
+term.clear()
+print("Setting up APIs...")
+os.loadAPI("apis/config")
+os.loadAPI("apis/check")
+print("Setting up aliases...")
+shell.setAlias("dsktp", "os/desktop")
+if fs.exists("boot/bootscreen") then
+  shell.run("boot/bootscreen")
+else
+  term.clear()
+  term.setCursorPos(1,1)
+  print("Error: File 'boot/bootscreen' is missing")
+end
+
