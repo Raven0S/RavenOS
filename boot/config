@@ -1,4 +1,6 @@
 term.clear()
 print("Setting up APIs...")
 os.loadAPI("apis/config")
+print("Setting up aliases...")
+shell.setAlias("back", "os/desktop")
 shell.run("boot/bootscreen")
