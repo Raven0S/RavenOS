@@ -44,17 +44,22 @@ term.clear()
 term.setCursorPos(1,1)
 term.setBackgroundColor(colors.white)
 term.setTextColor(colors.black)
+term.setCursorPos(50, 1)
+print("X")
 term.setCursorPos(w / 2 - 7, h / 2)
 print("Install")
 
 event, button, x, y = os.pullEvent("mouse_click")
 
-if button == 1 and x >= 18 and x <= 24 and y == 9 then
-  installAll()
-else
-  term.setTextColor(colors.white)
-  term.setBackgroundColor(colors.black)
-  term.clear()
-  term.setCursorPos(1,1)
+while true do
+  if button == 1 and x >= 18 and x <= 24 and y == 9 then
+    installAll()
+  elseif button == 1 and x == 51 and y == 1 then
+    term.setTextColor(colors.white)
+    term.setBackgroundColor(colors.black)
+    term.clear()
+    term.setCursorPos(1,1)
+    break
+  end
 end
 
