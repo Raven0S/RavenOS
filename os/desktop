@@ -27,7 +27,7 @@ if button == 1 and x == 1 and y == 19 then
     luaID = multishell.launch({}, "rom/programs/lua.lua")
     multishell.setTitle(luaID, "Lua")
     shell.run("os/desktop")
-  elseif button == 1 and x <= 11 and y == 16
+  elseif button == 1 and x <= 11 and y == 16 then
     shell.run("apps/downloader")
   else
     shell.run("os/desktop")
