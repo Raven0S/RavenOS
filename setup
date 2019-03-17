@@ -49,7 +49,7 @@ print("Install")
 
 event, button, x, y = os.pullEvent("mouse_click")
 
-if button == 1 and x == 18 and y == 9 then
+if button == 1 and x >= 18 and x <= 25 and y == 9 then
   installAll()
 else
   term.setTextColor(colors.white)
