@@ -16,28 +16,22 @@ function installAll()
   function format()
     fs.delete("*")
   end
+  
+  term.setTextColor(colors.white)
+  term.setBackgroundColor(colors.black)
+  term.clear()
+  term.setCursorPos(1,1)
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/startup", "startup")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/config", "boot/config")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/bootscreen", "boot/bootscreen")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/console", "os/console")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/cmd/uninstall", "cmds/uninstall")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/config", "apis/config")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/desktop", "pics/desktop.nfp")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/startmenu", "pics/startmenu.nfp")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/desktop", "os/desktop")
 
-  print("Are you sure you want to install RavenOS?")
-
-  input = read()
-
-  if input == "yes" then
-    term.clear()
-    term.setCursorPos(1,1)
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/startup", "startup")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/config", "boot/config")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/boot/bootscreen", "boot/bootscreen")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/console", "os/console")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/cmd/uninstall", "cmds/uninstall")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/config", "apis/config")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/desktop", "pics/desktop.nfp")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/pics/startmenu", "pics/startmenu.nfp")
-    install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/desktop", "os/desktop")
-
-    os.reboot()
-  else
-
-  end
+  os.reboot()
 end
 
 
