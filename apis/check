@@ -1,0 +1,7 @@
+function run(filename)
+  if fs.exists(filename) then
+    shell.run(filename)
+  else
+    print("Error: File '"..filename.."' is missing")
+  end
+end
