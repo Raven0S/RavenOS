@@ -18,3 +18,4 @@ while true do
     term.setCursorPos(12, 3)
     print("X")
   end
+end
