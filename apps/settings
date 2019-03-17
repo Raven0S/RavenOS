@@ -6,5 +6,7 @@ end
 
 term.setTextColor(colors.white)
 term.setBackgroundColor(colors.cyan)
+term.clear()
+term.setCursorPos(1,1)
 print("Settings")
 drawSetting("Use Rednet", 1, 3)
