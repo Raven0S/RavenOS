@@ -37,6 +37,7 @@ function installAll()
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/backup/config", "os/backup/config")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apps/downloader", "apps/downloader")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apis/text", "apis/text")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apps/settings", "apps/settings")
 
   os.reboot()
 end
