@@ -1,4 +1,12 @@
 term.clear()
 term.setCursorPos(1,1)
 print("BOOTING")
-shell.run("boot/config")
+if fs.exists("boot/config") then
+  shell.run("boot/config")
+else
+  term.clear()
+  term.setCursorPos(1,1)
+  print("Error: File 'boot/config' is missing")
+  sleep(3)
+  os.reboot()
+end
