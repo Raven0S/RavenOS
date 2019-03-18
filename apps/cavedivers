@@ -1,0 +1,17 @@
+term.clear()
+term.setCursorPos(1,1)
+
+print("_____________________")
+print("|                   |")
+print("|                   |")
+print("|      [Start]      |") 
+print("|      [Leave]      |")
+print("|                   |")
+print("|                   |")
+print("---------------------")
+
+event, button, x, y = os.pullEvent("mouse_click")
+
+if button == 1 and x >= 8 and x <= 14 and y == 4 then
+  term.clear()
+end
