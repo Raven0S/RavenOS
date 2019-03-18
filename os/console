@@ -7,7 +7,9 @@ print("Type 'dsktp' to go to desktop mode")
 print("")
 
 while true do
+  term.setTextColor(colors.red)
   write(">> ")
   cmd = read()
+  term.setTextColor(colors.white)
   shell.run(cmd)
 end
