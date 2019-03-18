@@ -9,7 +9,7 @@ print("")
 while true do
   term.setTextColor(colors.red)
   write(">> ")
-  cmd = read()
   term.setTextColor(colors.white)
+  cmd = read()
   shell.run(cmd)
 end
