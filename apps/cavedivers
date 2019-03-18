@@ -1,8 +1,13 @@
+function game()
+  term.clear()
+  print("START")
+end
+
 term.clear()
 term.setCursorPos(1,1)
 
 print("_____________________")
-print("|                   |")
+print("|    Cave Divers    |")
 print("|                   |")
 print("|      [Start]      |") 
 print("|      [Leave]      |")
@@ -13,5 +18,8 @@ print("---------------------")
 event, button, x, y = os.pullEvent("mouse_click")
 
 if button == 1 and x >= 8 and x <= 14 and y == 4 then
+  game()
+elseif button == 1 and x >= 8 and x<= 14 and y == 5 then
   term.clear()
+  term.setCursorPos(1,1)
 end
