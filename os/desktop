@@ -1,3 +1,5 @@
+os.pullEvent = os.pullEventRaw
+
 bg = paintutils.loadImage("pics/desktop.nfp")
 sm = paintutils.loadImage("pics/startmenu.nfp")
 
