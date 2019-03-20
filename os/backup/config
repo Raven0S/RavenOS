@@ -1,3 +1,5 @@
+os.pullEvent = os.pullEventRaw
+
 term.clear()
 print("Setting up APIs...")
 os.loadAPI("apis/config")
