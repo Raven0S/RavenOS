@@ -1,3 +1,5 @@
+os.pullEvent = os.pullEventRaw
+
 term.setTextColor(colors.white)
 term.setBackgroundColor(colors.black)
 term.clear()
