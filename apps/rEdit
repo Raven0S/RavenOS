@@ -1,0 +1,6 @@
+tArgs = {...}
+
+if #tArgs == 0 then
+  print("Correct Usage: open <path>")
+end
+
