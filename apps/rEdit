@@ -14,7 +14,6 @@ if fs.exists(tArgs[1]) then
   term.setCursorPos(1,1)
   print(contents)
   input = read()
-  fs.copy("os/temp", tArgs[1])
   file = fs.open(tArgs[1], "w")
   file.writeLine(input)
   file.close()
