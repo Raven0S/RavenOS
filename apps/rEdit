@@ -1,6 +1,14 @@
-tArgs = {...}
-
+local tArgs = {...}
+ 
 if #tArgs == 0 then
-  print("Correct Usage: open <path>")
+  print("Usage: test <path>")
+  return
 end
-
+ 
+term.clear()
+term.setCursorPos(1,1)
+input = read()
+fs.copy("os/temp", tArgs[1])
+file = fs.open(tArgs[1], "w")
+file.writeLine(input)
+file.close()
