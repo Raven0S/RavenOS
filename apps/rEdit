@@ -1,7 +1,7 @@
 local tArgs = {...}
  
 if #tArgs == 0 then
-  print("Usage: test <path>")
+  print("Proper Usage: open <path>")
   return
 end
  
