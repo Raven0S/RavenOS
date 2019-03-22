@@ -8,6 +8,7 @@ os.loadAPI("apis/text")
 print("Setting up aliases...")
 shell.setAlias("dsktp", "os/desktop")
 shell.setAlias("edit", "apps/edit")
+shell.setAlias("open", "apps/rEdit")
 if fs.exists("boot/bootscreen") then
   shell.run("boot/bootscreen")
 else
