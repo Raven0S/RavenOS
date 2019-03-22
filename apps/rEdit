@@ -4,11 +4,26 @@ if #tArgs == 0 then
   print("Proper Usage: open <path>")
   return
 end
- 
-term.clear()
-term.setCursorPos(1,1)
-input = read()
-fs.copy("os/temp", tArgs[1])
-file = fs.open(tArgs[1], "w")
-file.writeLine(input)
-file.close()
+
+if fs.exists(tArgs[1]) then
+  openFile = fs.open(tArgs[1], "r")
+  contents = openFile.readAll()
+  openFile.close()
+  
+  term.clear()
+  term.setCursorPos(1,1)
+  print(contents)
+  input = read()
+  fs.copy("os/temp", tArgs[1])
+  file = fs.open(tArgs[1], "w")
+  file.writeLine(input)
+  file.close()
+else
+  term.clear()
+  term.setCursorPos(1,1)
+  input = read()
+  fs.copy("os/temp", tArgs[1])
+  file = fs.open(tArgs[1], "w")
+  file.writeLine(input)
+  file.close()
+end
