@@ -40,6 +40,7 @@ function installAll()
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apps/settings", "apps/settings")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apps/edit", "apps/edit")
   install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/os/temp", "os/temp")
+  install("https://raw.githubusercontent.com/Raven0S/RavenOS/master/apps/rEdit", "apps/rEdit")
 
   os.reboot()
 end
